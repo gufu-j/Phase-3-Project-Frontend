@@ -23,14 +23,18 @@ function App() {
       });
   }, [])
 
+  //add this fuction for Controlled form
+  function handleAddBread(newBread){
+    console.log("new bread:", newBread)
+  }
+
 
   return (
     <div>
       <BakeryHeader/>
       <Routes>
-        
       <Route path="/" element={<Bakeries bakeries={bakeries}/>} />
-      <Route path="/bakeryBread/:id" element={<Breads bakeries={bakeries}/>} />
+      <Route path="/bakeryBread/:id" element={<Breads bakeries={bakeries} onAddBread={handleAddBread}/>} />
       </Routes>
     </div>
   );

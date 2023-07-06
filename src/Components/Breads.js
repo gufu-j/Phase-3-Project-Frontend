@@ -4,7 +4,7 @@ import SingleBread from "./SingleBread";
 import BreadForm from "./BreadForm";
 
 
-function Breads({bakeries}){
+function Breads({bakeries, onAddBread}){
 
     const { id } = useParams();
     let singleBakery = bakeries.find((bakery) => bakery.id === parseInt(id));
@@ -12,7 +12,7 @@ function Breads({bakeries}){
 
   return(
       <div className="Reviews">
-         {typeof(singleBakery) == "object" ? <BreadForm bID={singleBakery.id}/>: false}
+         {typeof(singleBakery) == "object" ? <BreadForm bID={singleBakery.id} onAddBread = {onAddBread}/>: false}
 
          {typeof(singleBakery) == "object" ? singleBakery.breads.map((bread) => {
           console.log(bread);

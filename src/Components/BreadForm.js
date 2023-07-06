@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 
-function BreadForm({bID}){
+function BreadForm({bID, onAddBread}){
 
     console.log(bID)
     //Factor out this section after you are done with project 
@@ -37,7 +37,7 @@ function BreadForm({bID}){
                 body: JSON.stringify(newBread), 
         })
         .then((response)=> response.json())
-        .then((newItem)=> console.log(newItem));
+        .then((newItem)=> onAddBread(newItem));
      }
     }
 
