@@ -1,5 +1,6 @@
 import React from "react";
 import SetUpBakery from "./SetUpBakery";
+import BakeriesForm from "./BakeriesForm";
 
 function Bakeries({bakeries}){
 
@@ -17,6 +18,7 @@ function Bakeries({bakeries}){
 
     return(
         <div className="Cards">
+            <BakeriesForm/>
             {displayBakeries}
         </div>
     )

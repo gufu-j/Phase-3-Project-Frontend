@@ -23,7 +23,7 @@ function App() {
       });
   }, [])
 
-  //add this fuction for Controlled form
+  //Post Method here for Breads. add this fuction for Controlled form
   function handleAddBread(newBread){
     console.log("new bread:", newBread)
 
@@ -42,8 +42,9 @@ function App() {
     setBakeries(updatedBakerie);
   }
 
-  //Delete
-  
+  //Post Method Here for Bakeries. 
+
+
   
 
 
