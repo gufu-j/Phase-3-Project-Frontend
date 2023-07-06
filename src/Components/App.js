@@ -48,6 +48,12 @@ function App() {
   
   }
 
+  //Delete a Bakery
+
+  function handleDeleteBakery(){
+  }
+  
+
   
 
 

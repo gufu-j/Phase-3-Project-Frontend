@@ -16,6 +16,7 @@ function Bakeries({bakeries, onAddBakery}){
         )
     })
 
+
     return(
         <div className="Cards">
             <BakeriesForm onAddBakery={onAddBakery}/>
