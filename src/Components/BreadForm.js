@@ -5,6 +5,7 @@ import { useState } from "react";
 function BreadForm({bID}){
 
     console.log(bID)
+    //Factor out this section after you are done with project 
    // const [obj setObj] = useState({name:"", price:"", bakery_id:"", type_of_bread:""})
 
     const [name, setName] = useState("")
