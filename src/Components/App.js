@@ -43,7 +43,8 @@ function App() {
   }
 
   //Post Method Here for Bakeries. 
-  function handleAddBakery(bakery){
+  function handleAddBakery(newBakery){
+    setBakeries([...bakeries, newBakery ])
   
   }
 
