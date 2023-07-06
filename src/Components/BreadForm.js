@@ -10,7 +10,7 @@ function BreadForm({bID, onAddBread}){
 
     const [name, setName] = useState("")
     const [price, setPrice] = useState("")
-    const [bakery_id, setBakeryId] = useState("")
+   // const [bakery_id, setBakeryId] = useState("")
     const [type_of_bread, setTypeOfbread] = useState("") 
 
     function handleSubmit(e){
@@ -18,15 +18,15 @@ function BreadForm({bID, onAddBread}){
         const newBread = {
             name:name,
             price:price,
-            bakery_id: bakery_id,
+            ///bakery_id: bakery_id,
             type_of_bread: type_of_bread
         }
         setName("")
         setPrice("" )
-        setBakeryId("")
+       // setBakeryId("")
         setTypeOfbread("")
         if(newBread.name === ""){
-            alert("You need to enter name, price, bakery_id and type of bread")
+            alert("You need to enter name, price, and type of bread")
         }else{
         
             fetch(`http://localhost:9292/bakeries/${bID}/breads`,{
@@ -59,13 +59,13 @@ function BreadForm({bID, onAddBread}){
                 onChange={(e)=>setPrice(e.target.value)}
                 placeholder="price of bread"
                 />
-                <input
+                {/* <input
                 type="text"
                 name="bakery_id"
                 value={bakery_id}      
                 onChange={(e)=> setBakeryId(e.target.value)}
                 placeholder=" bakery branch number"
-                />
+                /> */}
                 <input
                 type="text"
                 name="type_of_bread"
