@@ -43,7 +43,9 @@ function App() {
   }
 
   //Post Method Here for Bakeries. 
-
+  function handleAddBakery(bakery){
+  
+  }
 
   
 
@@ -52,7 +54,7 @@ function App() {
     <div>
       <BakeryHeader/>
       <Routes>
-      <Route path="/" element={<Bakeries bakeries={bakeries}/>} />
+      <Route path="/" element={<Bakeries bakeries={bakeries} onAddBakery={handleAddBakery} />} />
       <Route path="/bakeryBread/:id" element={<Breads bakeries={bakeries} onAddBread={handleAddBread}/>} />
       </Routes>
     </div>

@@ -2,7 +2,7 @@ import React from "react";
 import SetUpBakery from "./SetUpBakery";
 import BakeriesForm from "./BakeriesForm";
 
-function Bakeries({bakeries}){
+function Bakeries({bakeries, onAddBakery}){
 
     let displayBakeries  = bakeries.map((bakery) =>{
         return (
@@ -18,7 +18,7 @@ function Bakeries({bakeries}){
 
     return(
         <div className="Cards">
-            <BakeriesForm/>
+            <BakeriesForm onAddBakery={onAddBakery}/>
             {displayBakeries}
         </div>
     )
