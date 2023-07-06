@@ -26,7 +26,22 @@ function App() {
   //add this fuction for Controlled form
   function handleAddBread(newBread){
     console.log("new bread:", newBread)
+
+    const bakerieToBread = bakeries.find(
+      (bread) => bread.id === newBread.bakery_id
+    );
+    
+    bakerieToBread.breads.push(newBread);
+    const updatedBakerie = bakeries.map((bakery) => {
+      if (bakery.id === bakerieToBread.id) {
+        return bakerieToBread;
+      } else {
+        return bakery;
+      }
+    });
+    setBakeries(updatedBakerie);
   }
+  
 
 
   return (
