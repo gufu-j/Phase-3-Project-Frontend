@@ -7,7 +7,7 @@ return(
     <div className = "Bakery">
         <p>Name: {name}</p>
         <p>Location: {location}</p>
-        <p>Branch: {branch}</p>
+        {/* <p>Branch: {branch}</p> */}
         <Link to={`/bakeryBread/${bakeryID}`}>
         <button> breads</button>
         </Link>
