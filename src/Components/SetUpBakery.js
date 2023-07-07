@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import EditBox from "./EditBox";
+
 
 function SetUpBakery({name, location, bakeryID, onDeleteBakery, bakery}){
 
@@ -13,15 +15,17 @@ function SetUpBakery({name, location, bakeryID, onDeleteBakery, bakery}){
         .then(() => onDeleteBakery(bakery));
     }
 
+
 return(
     <div className = "Bakery">
         <p>Name: {name}</p>
         <p>Location: {location}</p>
         {/* <p>Branch: {branch}</p> */}
         <Link to={`/bakeryBread/${bakeryID}`}>
-        <button> Breads</button>
+        <button className="bread-btn"> Breads</button>
         </Link>
-        <button className="remove" onClick={handleClick}> Delete </button>
+        <button className="delete-btn" onClick={handleClick}> Delete </button>
+        <EditBox/>
     </div>
     )
 }
