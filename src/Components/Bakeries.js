@@ -2,7 +2,7 @@ import React from "react";
 import SetUpBakery from "./SetUpBakery";
 import BakeriesForm from "./BakeriesForm";
 
-function Bakeries({bakeries, onAddBakery}){
+function Bakeries({bakeries, onAddBakery, onDeleteBakery}){
 
     let displayBakeries  = bakeries.map((bakery) =>{
         return (
@@ -12,6 +12,8 @@ function Bakeries({bakeries, onAddBakery}){
             key = {bakery.id}
             location = {bakery.location}
             branch = {bakery.branch}
+            onDeleteBakery = {onDeleteBakery}
+            bakery = {bakery}
             />
         )
     })

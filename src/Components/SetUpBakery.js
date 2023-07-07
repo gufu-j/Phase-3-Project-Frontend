@@ -1,12 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function SetUpBakery({name, location, branch, bakeryID}){
+function SetUpBakery({name, location, bakeryID, onDeleteBakery, bakery}){
 
     
     // handle delete Function
-    function handleClick(bakery){
-        console.log(bakery)
+    function handleClick(){
+        fetch(`http://localhost:9292/bakeries/${bakeryID}`,{
+            method: "DELETE",
+        })
+        .then((r) => r.json())
+        .then(() => onDeleteBakery(bakery));
     }
 
 return(
@@ -19,7 +23,7 @@ return(
         </Link>
         <button className="remove" onClick={handleClick}> Delete </button>
     </div>
-)
+    )
 }
 
 export default SetUpBakery

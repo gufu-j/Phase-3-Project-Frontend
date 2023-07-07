@@ -50,7 +50,10 @@ function App() {
 
   //Delete a Bakery
 
-  function handleDeleteBakery(){
+  function handleDeletedBakery(deletedBakery){
+    const updatedBakery = bakeries.filter((bakery) => bakery.id !== deletedBakery.id);
+    setBakeries(updatedBakery)
+    
   }
   
 
@@ -61,7 +64,7 @@ function App() {
     <div>
       <BakeryHeader/>
       <Routes>
-      <Route path="/" element={<Bakeries bakeries={bakeries} onAddBakery={handleAddBakery} />} />
+      <Route path="/" element={<Bakeries bakeries = {bakeries} onAddBakery = {handleAddBakery} onDeleteBakery = {handleDeletedBakery}/>} />
       <Route path="/bakeryBread/:id" element={<Breads bakeries={bakeries} onAddBread={handleAddBread}/>} />
       </Routes>
     </div>
