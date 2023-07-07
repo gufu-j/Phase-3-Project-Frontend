@@ -1,17 +1,33 @@
 import React from "react";
 import { useState } from "react";
 
-function EditBox(){
+function EditBox({bakeryID}){
 
     const [modal, setModal] = useState(false);
 
     const toggleModal = () => {
         setModal(!modal);
-      };
+    };
 
 
+    const [name, setName] = useState("");
+    const [location, setLocation] = useState("");
 
-      
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch(`http://localhost:9292/bakeries/${bakeryID}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: name,
+        location: location,
+      }),
+    })
+      .then((r) => r.json())
+      .then((updatedBakery) => console.log(updatedBakery));
+  }
 
 
 
@@ -25,7 +41,22 @@ function EditBox(){
           <div className="modal-content">
             <h2>Edit Bakery Below</h2>
             <div>
-                Hey it's me 
+            <form onSubmit={handleSubmit}>
+                <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e)=> setName(e.target.value)} 
+                placeholder="Name of Bakery"     
+                />
+                <input
+                type= "text"
+                name="location" 
+                value={location}
+                onChange={(e)=> setLocation(e.target.value)}
+                placeholder="Location of Bakery"
+                />
+            </form>
             </div>
             <button className="close-modal" onClick={toggleModal}>
               Close

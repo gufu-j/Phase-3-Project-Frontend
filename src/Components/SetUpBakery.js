@@ -25,7 +25,7 @@ return(
         <button className="bread-btn"> Breads</button>
         </Link>
         <button className="delete-btn" onClick={handleClick}> Delete </button>
-        <EditBox/>
+        <EditBox bakeryID={bakeryID}/>
     </div>
     )
 }
