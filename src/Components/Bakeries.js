@@ -15,6 +15,7 @@ function Bakeries({bakeries, onAddBakery, onDeleteBakery, onUpdatedBakery}){
             branch = {bakery.branch}
             onDeleteBakery = {onDeleteBakery}
             onUpdatedBakery = {onUpdatedBakery}
+            bakery = {bakery}   //refer to the section from phase-2, we need this as the prop indicated what bakery we want to delete in simple words
             
             />
         )
