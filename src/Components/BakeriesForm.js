@@ -35,7 +35,7 @@ function BakeriesForm({onAddBakery}){
                 name="name"
                 value={name}
                 onChange={(e)=> setName(e.target.value)} 
-                placeholder="name of Bakery"     
+                placeholder="Name of Bakery"     
                 />
                 <input
                 type= "text"
