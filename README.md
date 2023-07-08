@@ -1,4 +1,4 @@
-Bakery Manager App
+<h1> Bakery Manager App </h1>
 
 
 This frontend bakery app is a simple app created to manage different bakeries and their breads at various locations. The whole point of this app is mainly concerned with adding the bread available at each bakery including their price and type of bread. This includes adding different bakeries with different names and locations all very organized and easy to handle with buttons to assist the user.  
