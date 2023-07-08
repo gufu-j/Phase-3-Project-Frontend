@@ -1,13 +1,16 @@
 import React from "react";
 import { useState } from "react";
 
-function EditBox({bakeryID}){
+function EditBox({bakeryID, onUpdatedBakery}){
 
     const [modal, setModal] = useState(false);
 
     const toggleModal = () => {
         setModal(!modal);
     };
+
+
+    //console.log(bakery) 
 
 
     const [name, setName] = useState("");
@@ -26,11 +29,9 @@ function EditBox({bakeryID}){
       }),
     })
       .then((r) => r.json())
-      .then((updatedBakery) => console.log(updatedBakery));
+      .then((updatedBakery) => onUpdatedBakery(updatedBakery));
   }
-
-
-
+  
     return(
         <>
          <button onClick={toggleModal} className="btn-modal"> Edit Bakery </button>
@@ -56,6 +57,7 @@ function EditBox({bakeryID}){
                 onChange={(e)=> setLocation(e.target.value)}
                 placeholder="Location of Bakery"
                 />
+                <button type="submit">Add Bread</button>
             </form>
             </div>
             <button className="close-modal" onClick={toggleModal}>

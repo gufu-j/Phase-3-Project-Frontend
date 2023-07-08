@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import EditBox from "./EditBox";
 
 
-function SetUpBakery({name, location, bakeryID, onDeleteBakery, bakery}){
+function SetUpBakery({name, location, bakeryID, onDeleteBakery, bakery, onUpdatedBakery}){
 
+    //console.log(bakery)
     
     // handle delete Function
     function handleClick(){
@@ -14,7 +15,7 @@ function SetUpBakery({name, location, bakeryID, onDeleteBakery, bakery}){
         .then((r) => r.json())
         .then(() => onDeleteBakery(bakery));
     }
-
+    //console.log(bakeryID)
 
 return(
     <div className = "Bakery">
@@ -25,7 +26,7 @@ return(
         <button className="bread-btn"> Breads</button>
         </Link>
         <button className="delete-btn" onClick={handleClick}> Delete </button>
-        <EditBox bakeryID={bakeryID}/>
+        <EditBox bakeryID={bakeryID} onUpdatedBakery= {onUpdatedBakery}/>
     </div>
     )
 }

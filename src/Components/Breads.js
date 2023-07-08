@@ -5,14 +5,14 @@ import BreadForm from "./BreadForm";
 
 
 function Breads({bakeries, onAddBread}){
-
+  
+    console.log(bakeries)
     const { id } = useParams();
     let singleBakery = bakeries.find((bakery) => bakery.id === parseInt(id));
 
-
   return(
       <div className="Reviews">
-         {typeof(singleBakery) == "object" ? <BreadForm bID={singleBakery.id} onAddBread = {onAddBread}/>: false}
+         {typeof(singleBakery) == "object" ? <BreadForm bakeryID={singleBakery.id} onAddBread = {onAddBread}/>: false}
 
          {typeof(singleBakery) == "object" ? singleBakery.breads.map((bread) => {
           console.log(bread);

@@ -55,16 +55,25 @@ function App() {
     setBakeries(updatedBakery)
     
   }
+
+  //Patch Method 
+
+  function handleUpdateBakery(updatedBakery){
+    const updatedBakeries = bakeries.map((bakery)=>{
+      if(bakery.id === updatedBakery.id){
+        return updatedBakery
+      }else{
+        return bakery;
+      }
+    });
+    setBakeries(updatedBakeries)
+  }
   
-
-  
-
-
   return (
     <div>
       <BakeryHeader/>
       <Routes>
-      <Route path="/" element={<Bakeries bakeries = {bakeries} onAddBakery = {handleAddBakery} onDeleteBakery = {handleDeletedBakery}/>} />
+      <Route path="/" element={<Bakeries bakeries = {bakeries} onAddBakery = {handleAddBakery} onDeleteBakery = {handleDeletedBakery} onUpdatedBakery = {handleUpdateBakery}/>} />
       <Route path="/bakeryBread/:id" element={<Breads bakeries={bakeries} onAddBread={handleAddBread}/>} />
       </Routes>
     </div>
