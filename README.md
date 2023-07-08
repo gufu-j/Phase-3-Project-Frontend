@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+Bakery Manager App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+This frontend bakery app is a simple app created to manage different bakeries and their breads at various locations. The whole point of this app is mainly concerned with adding the bread available at each bakery including their price and type of bread. This includes adding different bakeries with different names and locations all very organized and easy to handle with buttons to assist the user.  
+This App was created with a database managed by Ruby. This means that all CRUD interactions (Create, Read, Update, and Delete) performed at the frontend are likely to be captured and tracked by the backend. This makes our system more efficient and even better to interact with because it's working fully on its own. That being said, let's check out the way the app looks.
 
-In the project directory, you can run:
+In the picture below, one can see the way the main page of the app looks like. It has a classy old style and buttons. Sentences are also easy to read and see. Here, the user can type down the name of the bakery and location, then hit add bakery. This will add a bakery automatically and with the same style as the rest on the list of bakeries- yellow charts- below. 
+<img width="831" alt="image" src="https://github.com/gufu-j/Phase-3-Project-Frontend/assets/112182396/12b6c2d1-54f0-48e6-9a95-5fe92eb04c05">
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+If the user types wrong the name and location or decided to edit it eventually, the user can press Edit Bakery. Once that happens a modal will pop up allowing the user to change the name of the bakery and location and hit " Press Here to Update ".
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<img width="835" alt="image" src="https://github.com/gufu-j/Phase-3-Project-Frontend/assets/112182396/f9e6cd37-56fe-4e3b-a3e6-6ad107002547">
 
-### `npm test`
+If the user is interested in deleting a bakery completely, he/she can easily hit "Delete". 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Now... here is when it comes to the best part!! 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If the user wishes to see the different types of  bread, price, and name of each bakery, clicking on "Breads" will allow this. Once there, one is able to add breads and keep track of it along with the rest. For now, in the picture below, you will see the way this section looks like, notice that some space has been left for adding more features to the app. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="830" alt="image" src="https://github.com/gufu-j/Phase-3-Project-Frontend/assets/112182396/5f8a6f07-0e96-4af3-85ff-d1732e316193">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Although this may seem to be a pretty simple app it has a very complex structure coming all the way from Ruby along with React. They both need each other to make all this happens. This project consisted mainly in building the database and then building a simple app to interact with it. Either simple or complex, nobody can deny how beautiful and nice are the things that can be done with ruby and react! 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Please, see the database structure in Ruby in the link attached bellow:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
