@@ -17,7 +17,7 @@ If the user is interested in deleting a bakery completely, he/she can easily hit
 Now... here is when it comes to the best part!! 
 
 
-If the user wishes to see the different types of  bread, price, and name of each bakery, clicking on "Breads" will allow this. Once there, one is able to add breads and keep track of it along with the rest. For now, in the picture below, you will see the way this section looks like, notice that some space has been left for adding more features to the app. 
+If the user wishes to see the different types of  bread, price, and name of each bakery, clicking on "Breads" will allow this. Once there, the user is able to add bread to a list and keep track of it along with the rest. For now, in the picture below, it is possible to see the way this section looks like, notice that some space has been left for adding more features to the app. 
 
 <img width="830" alt="image" src="https://github.com/gufu-j/Phase-3-Project-Frontend/assets/112182396/5f8a6f07-0e96-4af3-85ff-d1732e316193">
 
