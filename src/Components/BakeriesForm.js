@@ -13,6 +13,8 @@ function BakeriesForm({onAddBakery}){
             name: name,
             location:location,
         };
+        setName("")
+        setLocation("")
         fetch("http://localhost:9292/bakeries",{
             method: "POST",
             headers: {

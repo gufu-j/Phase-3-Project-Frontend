@@ -69,13 +69,6 @@ function BreadForm({bakeryID, onAddBread}){
                 onChange={(e)=>setPrice(e.target.value)}
                 placeholder="price of bread"
                 />
-                {/* <input
-                type="text"
-                name="bakery_id"
-                value={bakery_id}      
-                onChange={(e)=> setBakeryId(e.target.value)}
-                placeholder=" bakery branch number"
-                /> */}
                 <input
                 type="text"
                 name="type_of_bread"
