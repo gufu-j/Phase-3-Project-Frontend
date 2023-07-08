@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import {useNavigate} from 'react-router-dom';
 
 function BreadForm({bakeryID, onAddBread}){
 
@@ -10,7 +10,7 @@ function BreadForm({bakeryID, onAddBread}){
 
     const [name, setName] = useState("")
     const [price, setPrice] = useState("")
-    
+
    // const [bakery_id, setBakeryId] = useState("")
     const [type_of_bread, setTypeOfbread] = useState("") 
 
@@ -42,10 +42,19 @@ function BreadForm({bakeryID, onAddBread}){
      }
     }
 
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+    navigate('/');
+    };
+
+
+
     return(
         <div>
             <form onSubmit={handleSubmit}>
             <button type="submit">Add Bread</button>
+            <button onClick={handleClick}>Go back</button>
                 <input
                 type="text"
                 name="name"

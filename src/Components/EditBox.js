@@ -18,6 +18,8 @@ function EditBox({bakeryID, onUpdatedBakery}){
 
   function handleSubmit(e) {
     e.preventDefault();
+    setName("")
+    setLocation("")
     fetch(`http://localhost:9292/bakeries/${bakeryID}`, {
       method: "PATCH",
       headers: {
