@@ -8,7 +8,7 @@ In the picture below, one can see the way the main page of the app looks like. I
 <img width="831" alt="image" src="https://github.com/gufu-j/Phase-3-Project-Frontend/assets/112182396/12b6c2d1-54f0-48e6-9a95-5fe92eb04c05">
 
 
-If the user types wrong the name and location or decided to edit it eventually, the user can press Edit Bakery. Once that happens a modal will pop up allowing the user to change the name of the bakery and location and hit " Press Here to Update ".
+If the user types wrong the name and location or decides to edit it eventually, the user can press Edit Bakery. Once that happens a modal will pop up allowing the user to change the name of the bakery and location and hit " Press Here to Update ".
 
 <img width="835" alt="image" src="https://github.com/gufu-j/Phase-3-Project-Frontend/assets/112182396/f9e6cd37-56fe-4e3b-a3e6-6ad107002547">
 
