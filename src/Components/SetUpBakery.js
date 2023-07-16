@@ -5,9 +5,7 @@ import EditBox from "./EditBox";
 
 function SetUpBakery({name, location, bakeryID, onDeleteBakery, bakery, onUpdatedBakery}){
 
-    //console.log(bakery)
     
-    // handle delete Function
     function handleClick(){
         fetch(`http://localhost:9292/bakeries/${bakeryID}`,{
             method: "DELETE",
@@ -15,13 +13,11 @@ function SetUpBakery({name, location, bakeryID, onDeleteBakery, bakery, onUpdate
         .then((r) => r.json())
         .then(() => onDeleteBakery(bakery));
     }
-    //console.log(bakeryID)
 
 return(
     <div className = "Bakery">
         <p>Name: {name}</p>
         <p>Location: {location}</p>
-        {/* <p>Branch: {branch}</p> */}
         <Link to={`/bakeryBread/${bakeryID}`}>
         <button className="bread-btn"> Breads</button>
         </Link>

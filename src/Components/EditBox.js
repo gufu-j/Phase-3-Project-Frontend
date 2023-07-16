@@ -9,8 +9,7 @@ function EditBox({bakeryID, onUpdatedBakery}){
         setModal(!modal);
     };
 
-
-    //console.log(bakery) 
+ 
 
 
     const [name, setName] = useState("");
@@ -59,7 +58,7 @@ function EditBox({bakeryID, onUpdatedBakery}){
                 onChange={(e)=> setLocation(e.target.value)}
                 placeholder="Location of Bakery"
                 />
-                <button type="submit">Add Bread</button>
+                <button type="submit"> Press Here to Update </button>
             </form>
             </div>
             <button className="close-modal" onClick={toggleModal}>
