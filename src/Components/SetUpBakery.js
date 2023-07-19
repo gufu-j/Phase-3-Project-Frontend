@@ -3,11 +3,12 @@ import { Link } from "react-router-dom";
 import EditBox from "./EditBox";
 
 
-function SetUpBakery({name, location, bakeryID, onDeleteBakery, bakery, onUpdatedBakery}){
+function SetUpBakery({bakery, onDeleteBakery, onUpdatedBakery}){
+
 
     
     function handleClick(){
-        fetch(`http://localhost:9292/bakeries/${bakeryID}`,{
+        fetch(`http://localhost:9292/bakeries/${bakery.id}`,{
             method: "DELETE",
         })
         .then((r) => r.json())
@@ -16,13 +17,13 @@ function SetUpBakery({name, location, bakeryID, onDeleteBakery, bakery, onUpdate
 
 return(
     <div className = "Bakery">
-        <p>Name: {name}</p>
-        <p>Location: {location}</p>
-        <Link to={`/bakeryBread/${bakeryID}`}>
+        <p>Name: {bakery.name}</p>
+        <p>Location: {bakery.location}</p>
+        <Link to={`/bakeryBread/${bakery.id}`}>
         <button className="bread-btn"> Breads</button>
         </Link>
         <button className="delete-btn" onClick={handleClick}> Delete </button>
-        <EditBox bakeryID={bakeryID} onUpdatedBakery= {onUpdatedBakery}/>
+        <EditBox bakery={bakery} onUpdatedBakery= {onUpdatedBakery}/>
     </div>
     )
 }

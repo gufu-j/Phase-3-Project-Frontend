@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-function EditBox({bakeryID, onUpdatedBakery}){
+function EditBox({bakery, onUpdatedBakery}){
 
     const [modal, setModal] = useState(false);
 
@@ -12,14 +12,14 @@ function EditBox({bakeryID, onUpdatedBakery}){
  
 
 
-    const [name, setName] = useState("");
-    const [location, setLocation] = useState("");
+    const [name, setName] = useState(bakery.name);
+    const [location, setLocation] = useState(bakery.location);
 
   function handleSubmit(e) {
     e.preventDefault();
     setName("")
     setLocation("")
-    fetch(`http://localhost:9292/bakeries/${bakeryID}`, {
+    fetch(`http://localhost:9292/bakeries/${bakery.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
