@@ -4,9 +4,9 @@ import SingleBread from "./SingleBread";
 import BreadForm from "./BreadForm";
 
 
-function Breads({bakeries, onAddBread}){
+function Breads({bakeries, onAddBread, onDeletedBread}){
   
-    console.log(bakeries)
+    //console.log(bakeries)
     const { id } = useParams();
     let singleBakery = bakeries.find((bakery) => bakery.id === parseInt(id));
 
@@ -20,9 +20,7 @@ function Breads({bakeries, onAddBread}){
             <SingleBread
                 key={bread.id}
                 bread = {bread}
-                // name={bread.name}
-                // bType={bread.type_of_bread}
-                // bPrice={bread.price}
+                onDeletedBread = {onDeletedBread}
             />
           );
          }) : console.log("it is not an object")}

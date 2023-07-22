@@ -14,6 +14,8 @@ function App() {
 
   const [bakeries, setBakeries] = useState([]);
 
+  //console.log(bakeries)
+
   useEffect(() => {
     fetch("http://localhost:9292/bakeries")
       .then((resp) => resp.json())
@@ -24,7 +26,7 @@ function App() {
   }, [])
 
   function handleAddBread(newBread){
-    console.log("new bread:", newBread)
+    //console.log("new bread:", newBread)
 
     const bakerieToBread = bakeries.find(
       (bread) => bread.id === newBread.bakery_id
@@ -64,13 +66,23 @@ function App() {
     });
     setBakeries(updatedBakeries)
   }
+
+  /////////////
+  /// this section is not part of the project
+  
+  function handleDeletedBread(deletedBread){
+    console.log("this the breadDeleted:", deletedBread)
+    // const newbreadsFromBakery = bakeries.find((bread) => bread).filter((bread)=> bread.id !== deletedBread.id);
+    // setBakeries(newbreadsFromBakery)
+  }
+  ///////////
   
   return (
     <div>
       <BakeryHeader/>
       <Routes>
       <Route path="/" element={<Bakeries bakeries = {bakeries} onAddBakery = {handleAddBakery} onDeleteBakery = {handleDeletedBakery} onUpdatedBakery = {handleUpdateBakery}/>} />
-      <Route path="/bakeryBread/:id" element={<Breads bakeries={bakeries} onAddBread={handleAddBread}/>} />
+      <Route path="/bakeryBread/:id" element={<Breads bakeries={bakeries} onAddBread={handleAddBread} onDeletedBread = {handleDeletedBread}/>} />
       </Routes>
     </div>
   );

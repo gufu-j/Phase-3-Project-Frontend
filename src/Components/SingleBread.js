@@ -1,22 +1,23 @@
 import React from "react";
 
-function SingleBread({bread}){
+function SingleBread({bread, onDeletedBread}){
 
-    // function handleDeleteClick() {
-    //     fetch(`http://localhost:9292/reviews/${review.id}`, {
-    //       method: "DELETE",
-    //     })
-    //       .then((r) => r.json())
-    //       .then((deletedReview) => onDeleteReview(deletedReview));
-    //   }
+    function handleDeleteClickBread() {
+        console.log("hey it's me right here")
+         fetch(`http://localhost:9292/bakeries/:bakery_id/breads/${bread.id}`, {
+          method: "DELETE",
+        })
+           .then((r) => r.json())
+           .then((deletedBread) => onDeletedBread(deletedBread));
+      }
 
     return( 
     <div className="Breads">
         <p>Name:{bread.name}</p>
         <p>Type:{bread.type_of_bread}</p>
-        <p>Net Price : $ {bread.price}</p>
+        <p>Net Price : ${bread.price}</p>
         <div>
-        <button className="breadDelete"> delete </button>
+        <button onClick = {handleDeleteClickBread} className="breadDelete"> delete </button>
         </div>
     </div>
     )
