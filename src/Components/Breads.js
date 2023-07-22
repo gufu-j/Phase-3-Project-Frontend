@@ -15,13 +15,14 @@ function Breads({bakeries, onAddBread}){
          {typeof(singleBakery) == "object" ? <BreadForm bakeryID={singleBakery.id} onAddBread = {onAddBread}/>: false}
 
          {typeof(singleBakery) == "object" ? singleBakery.breads.map((bread) => {
-          console.log(bread);
+          //console.log(bread);
             return (
             <SingleBread
                 key={bread.id}
-                bName={bread.name}
-                bType={bread.type_of_bread}
-                bPrice={bread.price}
+                bread = {bread}
+                // name={bread.name}
+                // bType={bread.type_of_bread}
+                // bPrice={bread.price}
             />
           );
          }) : console.log("it is not an object")}
