@@ -7,11 +7,6 @@ function Bakeries({bakeries, onAddBakery, onDeleteBakery, onUpdatedBakery}){
     let displayBakeries  = bakeries.map((bakery) =>{
         return (
             <SetUpBakery
-            // name = {bakery.name}
-            // bakeryID = {bakery.id}
-            // key = {bakery.id}
-            // location = {bakery.location}
-            // branch = {bakery.branch}
             onDeleteBakery = {onDeleteBakery}
             onUpdatedBakery = {onUpdatedBakery}
             bakery = {bakery}   

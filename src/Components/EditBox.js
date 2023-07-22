@@ -9,9 +9,6 @@ function EditBox({bakery, onUpdatedBakery}){
         setModal(!modal);
     };
 
- 
-
-
     const [name, setName] = useState(bakery.name);
     const [location, setLocation] = useState(bakery.location);
 
