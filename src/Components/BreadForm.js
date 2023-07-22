@@ -8,7 +8,6 @@ function BreadForm({bakeryID, onAddBread}){
 
     const [name, setName] = useState("")
     const [price, setPrice] = useState("")
-
     const [type_of_bread, setTypeOfbread] = useState("") 
 
     function handleSubmit(e){
@@ -16,7 +15,6 @@ function BreadForm({bakeryID, onAddBread}){
         const newBread = {
             name:name,
             price:price,
-            
             type_of_bread: type_of_bread
         }
         setName("")

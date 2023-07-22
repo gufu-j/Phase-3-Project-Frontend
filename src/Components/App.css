@@ -80,5 +80,14 @@ body { background-color: rgb(192, 252, 255);}
   font-family: monospace;
 }
 
+.breadDelete{
+  height: 25px;
+  position: relative;
+  border: 3px solid rgb(8, 16, 17);
+  top: 400%;
+  left: 400%;
+
+}
+
 
 

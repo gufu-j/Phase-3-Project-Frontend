@@ -7,6 +7,9 @@ function SingleBread({bName, bType, bPrice}){
         <p>Name:{bName}</p>
         <p>Type:{bType}</p>
         <p>Net Price : $ {bPrice}</p>
+        <div>
+        <button className="breadDelete"> delete </button>
+        </div>
     </div>
     )
 }

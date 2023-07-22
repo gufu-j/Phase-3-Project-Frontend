@@ -10,7 +10,6 @@ function Bakeries({bakeries, onAddBakery, onDeleteBakery, onUpdatedBakery}){
             onDeleteBakery = {onDeleteBakery}
             onUpdatedBakery = {onUpdatedBakery}
             bakery = {bakery}   
-            
             />
         )
     })
